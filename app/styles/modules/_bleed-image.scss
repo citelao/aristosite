@@ -1,0 +1,33 @@
+.bleed-image {
+  position: relative;
+  display: block;
+  padding: 10rem 2rem;
+
+  background-size: cover;
+  background-attachment: fixed;
+
+  color: $yellow;
+
+  &:hover {
+    color: #fff;
+  }
+
+  // &:after {
+  //   content: ' ';
+  //   display: block;
+  //   position: absolute;
+
+  //   top: 0;
+  //   bottom: 0;
+  //   left: 0;
+  //   right: 0;
+
+  //   background: rgba(0, 0, 0, 0.4);
+  // }
+}
+
+.bleed-image__content {
+  display: inline-block;
+  background: rgba(0,0,0, 0.4);
+  padding: 2rem;
+}
