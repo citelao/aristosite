@@ -1,4 +1,4 @@
-.navigation--list {
+.navigation__list {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -7,7 +7,7 @@
   border-bottom: 1px solid #333;
 }
 
-.navigation--item {
+.navigation__item {
   display: inline-block;
   padding: 0;
   margin: 0;
@@ -15,7 +15,7 @@
   // float: left;
 }
 
-.navigation--link {
+.navigation__link {
   display: block;
   padding: 5rem;
 

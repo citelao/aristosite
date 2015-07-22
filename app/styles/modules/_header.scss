@@ -1,17 +1,18 @@
 .header {
   background: url('../images/header/bg.png');
   background-size: 300px 300px;
+  background-attachment: fixed;
 
   padding: 15rem 0;
   color: $yellow;
   text-align: center;
 }
 
-.header--link {
+.header__link {
   background: #000;
   display: block;
 }
 
-.header--logo {
+.header__logo {
   width: 100%;
 }
