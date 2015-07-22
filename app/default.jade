@@ -2,7 +2,8 @@ doctype html
 html.no-js
   head
     meta(charset='utf-8')
-    title My Webapp
+    block title
+      title The Washington University Aristocats
     meta(name='description' content='')
     meta(name='viewport' content='width=device-width, initial-scale=1')
     // Place favicon.ico and apple-touch-icon.png in the root directory
@@ -13,7 +14,7 @@ html.no-js
     // endbuild
 
     // build:css styles/main.css
-    link(rel='stylesheet' href='styles/main.css')
+    link(rel='stylesheet' href='/styles/main.css')
     // endbuild
 
     // build:js scripts/vendor/modernizr.js
@@ -26,23 +27,8 @@ html.no-js
     | <![endif]-->
 
     .container
-      .header
-        ul.nav.nav-pills.pull-right
-          li.active: a(href='#') Home
-          li: a(href='#') About
-          li: a(href='#') Contact
-
-        h3.text-muted My Webapp
-
-      .jumbotron
-        h1 'Allo, 'Allo!
-        p.lead Always a pleasure scaffolding your apps.
-        p: a.btn.btn-lg.btn-success(href='#') Splendid!
 
       block content
-
-      .footer
-        p ♥ from the Yeoman team
 
     // Google Analytics: change UA-XXXXX-X to be your site's ID.
     script.

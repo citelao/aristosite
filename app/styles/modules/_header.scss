@@ -7,12 +7,11 @@
   text-align: center;
 }
 
-.header--logo {
-  display: inline-block;
+.header--link {
   background: #000;
+  display: block;
+}
 
-  padding: 2rem;
-
+.header--logo {
   width: 100%;
-  max-width: 700px;
 }

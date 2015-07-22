@@ -2,7 +2,8 @@ doctype html
 html.no-js
   head
     meta(charset='utf-8')
-    title Acats title TODO
+    block title
+      title The Washington University Aristocats
     meta(name='description' content='')
     meta(name='viewport' content='width=device-width, initial-scale=1')
     // Place favicon.ico and apple-touch-icon.png in the root directory
@@ -26,8 +27,24 @@ html.no-js
     | <![endif]-->
 
     .container
+      block container
+        nav.navigation
+          ul.navigation--list
+            li.navigation--item: a.navigation--link(href="/") home
+            li.navigation--item: a.navigation--link(href="/news") news
+            li.navigation--item: a.navigation--link(href="/about.html") about us
+            li.navigation--item: a.navigation--link(href="/music") music
+            li.navigation--item: a.navigation--link(href="/auditions") auditions
+            li.navigation--item: a.navigation--link(href="/contact") contact
 
-      block content
+        .content
+          block content
+
+        .footer.row
+          block footer
+            p.col-md-8.col-md-offset-2 The songs we sing are copyrights of their respective owners, but the arrangements are ours, and this site is ours. Please don't use anything here without permission.
+            p.col-md-8.col-md-offset-2 TODO WUSTL &amp; SU links
+
 
     // Google Analytics: change UA-XXXXX-X to be your site's ID.
     script.

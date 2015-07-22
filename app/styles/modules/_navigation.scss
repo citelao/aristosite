@@ -1,4 +1,4 @@
-.navigation {
+.navigation--list {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -19,10 +19,11 @@
   display: block;
   padding: 5rem;
 
-  color: #fff;
+  color: $yellow;
 
-  &:hover {
-    background: #eee;
+  &:hover, &:focus {
+    background: $yellow;
+    color: $background;
     text-decoration: none;
   }
 }
