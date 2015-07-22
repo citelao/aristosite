@@ -4,7 +4,6 @@
   padding: 10rem 2rem;
 
   background-size: cover;
-  background-attachment: fixed;
 
   color: $yellow;
 
@@ -30,4 +29,8 @@
   display: inline-block;
   background: rgba(0,0,0, 0.4);
   padding: 2rem;
+}
+
+.bleed-image--fixed {
+  background-attachment: fixed;
 }

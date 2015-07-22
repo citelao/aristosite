@@ -2,16 +2,19 @@ extends layouts/hero
 
 block content
   .news.row
-    h1 News
-    p the latest
-    ul
-      li
-        h2 get ready for auditions
-        p We're excited, too! Check out our tips :P
-  a.bleed-image(style="background-image:url('images/home/about.jpg');" href="#")
-    .bleed-image__content
-      h1 About us
-      p Who even becomes an Aristocat?
-  .music.row
-    h1 Music
-    p our music
+    .col-md-12
+      h1 News
+      p the latest
+      ul
+        li
+          h2 get ready for auditions
+          p We're excited, too! Check out our tips :P
+  .row
+    a.music.col-md-6.bleed-image(style="background-image:url('images/home/music.jpg');" href="/music.html")
+      .bleed-image__content
+        h1 Music
+        p our music
+    a.about.col-md-6.bleed-image(style="background-image:url('images/home/about.jpg');" href="/about.html")
+      .bleed-image__content
+        h1 About us
+        p Who even becomes an Aristocat?

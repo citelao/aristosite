@@ -6,11 +6,16 @@ $icon-font-path: '../fonts/';
 
 @import 'variables';
 
+// Reusable
+@import 'modules/bleed-image';
+
+// Default page
 @import 'modules/header';
 @import 'modules/navigation';
 @import 'modules/content';
 @import 'modules/footer';
 
-@import 'modules/bleed-image';
+// Homepage
+@import 'modules/news';
 
 @import 'document';
