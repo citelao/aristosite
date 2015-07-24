@@ -1,3 +1,7 @@
+.navigation {
+  @include make-row();
+}
+
 .navigation__list {
   padding: 0;
   margin: 0;
@@ -12,12 +16,21 @@
   padding: 0;
   margin: 0;
 
-  // float: left;
+  @include mobile {
+    width: 100%;
+  }
+
+  @include desktop {
+    width: auto;
+  }
 }
 
 .navigation__link {
   display: block;
   padding: 5rem;
+
+  width: 100%;
+  text-align: center;
 
   color: $yellow;
 

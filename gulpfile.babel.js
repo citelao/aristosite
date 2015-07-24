@@ -118,6 +118,7 @@ gulp.task('serve', ['views', 'styles', 'fonts'], () => {
   ]).on('change', reload);
 
   gulp.watch('app/*.jade', ['views']);
+  gulp.watch('app/layouts/*.jade', ['views']);
   gulp.watch('app/styles/**/*.scss', ['styles']);
   gulp.watch('app/fonts/**/*', ['fonts']);
   gulp.watch('bower.json', ['wiredep', 'fonts']);

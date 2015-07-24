@@ -1,20 +1,36 @@
 extends layouts/hero
 
 block content
-  .news.row
-    .col-md-12
-      h1 News
-      p the latest
-      ul
-        li
-          h2 get ready for auditions
-          p We're excited, too! Check out our tips :P
+  .about.bleed-image(style="background-image:url('images/home/hero.jpg'); background-position: 0 -270px;")
+    .bleed-image__content
+      h1 Purr. Meowetatum. Hiss.
+      p Irreverent Disney a cappella at Washington University. In Saint Louis.
+  .news
+    .row.row-eq-height
+      .col-md-6
+        h1 Get ready for auditions 2015!
+        p.
+          We are so excited to search for new aristokittens
+          for the fall of 2015. Get some tips and info on
+          our auditions process
+        p Read more
+      .col-md-6
+        h1 Why auditions suck
+        p.
+          I'm Ben, and my audition experience was terrible.
+          Here are some tips so yours isn't.
+        p Read more
+    .row
+      h1 More news
+      p There's always more news.
   .row
-    a.music.col-md-6.bleed-image(style="background-image:url('images/home/music.jpg');" href="/music.html")
-      .bleed-image__content
-        h1 Music
-        p our music
-    a.about.col-md-6.bleed-image(style="background-image:url('images/home/about.jpg');" href="/about.html")
-      .bleed-image__content
-        h1 About us
-        p Who even becomes an Aristocat?
+    .col-md-6
+      a.music.bleed-image(style="background-image:url('images/home/music.jpg');" href="/music.html")
+        .bleed-image__content
+          h1 Music
+          p What songs do we sing?
+    .col-md-6
+      a.about.bleed-image(style="background-image:url('images/home/about.jpg');" href="/about.html")
+        .bleed-image__content
+          h1 Join us
+          p How do you even become an Aristocat?
