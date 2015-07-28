@@ -41,4 +41,9 @@
     transform: scale(1.2);
     transition: all 0s ease-in;
   }
+
+  &:active {
+    transform: scale(0.9);
+    transition: all 0.1s ease-in-out;
+  }
 }

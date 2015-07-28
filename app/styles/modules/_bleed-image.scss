@@ -29,7 +29,8 @@
   }
 }
 
-a.bleed-image:hover {
+a.bleed-image:hover,
+a.bleed-image:focus {
   color: #fff;
 
   .bleed-image__content {
@@ -45,6 +46,13 @@ a.bleed-image:hover {
     .bleed-image__link {
       color: #fff;
     }
+  }
+}
+
+a.bleed-image:active {
+  .bleed-image__content {
+    transform: scale(0.95);
+    transition: all 0.1s ease-in-out;
   }
 }
 
