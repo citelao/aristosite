@@ -32,6 +32,10 @@
 a.bleed-image:hover {
   color: #fff;
 
+  .bleed-image__content {
+    transform: scale(1.1);
+  }
+
   &.bleed-image--withlink:hover {
     color: $yellow;
 
