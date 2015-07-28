@@ -1,0 +1,26 @@
+// a la Foundation
+// ... but just with 3 items per row.
+
+$items: 3;
+
+.block-grid {
+  list-style: none;
+  padding: 0;
+  display: block;
+}
+
+.block-grid li,
+.block-grid__item {
+  display: block;
+  float: left;
+  width: 100%/$items;
+  position: relative;
+
+  margin: 0;
+  padding: 0;
+  padding-bottom: 100%/$items;
+}
+
+.block-grid__item-content {
+  position: absolute;
+}

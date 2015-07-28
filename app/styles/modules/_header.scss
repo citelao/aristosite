@@ -6,6 +6,11 @@
   padding: 15rem 0;
   color: $yellow;
   text-align: center;
+
+  &.header--bleed {
+    background-size: cover;
+    background-position: center top;
+  }
 }
 
 .header__link {
@@ -15,4 +20,10 @@
 
 .header__logo {
   width: 100%;
+}
+
+.header__title {
+  @include md {
+    font-size: 10rem;
+  }
 }

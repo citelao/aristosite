@@ -8,8 +8,11 @@ $icon-font-path: '../fonts/';
 @import 'variables';
 @import 'typography';
 
+@import 'shame';
+
 // Reusable
 @import 'modules/bleed-image';
+@import 'modules/block-grid';
 
 // Default page
 @import 'modules/header';
@@ -19,5 +22,8 @@ $icon-font-path: '../fonts/';
 
 // Homepage
 @import 'modules/news';
+
+// About
+@import 'modules/person';
 
 @import 'document';
