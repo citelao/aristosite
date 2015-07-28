@@ -1,10 +1,10 @@
-@mixin mobile {
-  @media (min-width: #{$screen-xs-min}) {
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
     @content;
   }
 }
 
-@mixin desktop {
+@mixin lg {
   @media (min-width: #{$screen-lg-min}) {
     @content;
   }

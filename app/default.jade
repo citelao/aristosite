@@ -14,7 +14,7 @@ html.no-js
     // endbuild
 
     // build:css styles/main.css
-    link(rel='stylesheet' href='/styles/main.css')
+    link(rel='stylesheet' href='styles/main.css')
     // endbuild
 
     // build:js scripts/vendor/modernizr.js
@@ -27,8 +27,29 @@ html.no-js
     | <![endif]-->
 
     .container
+      block container
+        nav.navigation
+          ul.navigation__list
+            li.navigation__item: a.navigation__link(href="/") home
+            li.navigation__item: a.navigation__link(href="/about.html") news
+            li.navigation__item: a.navigation__link(href="/about.html") about us
+            li.navigation__item: a.navigation__link(href="/music") music
+            li.navigation__item: a.navigation__link(href="/auditions") auditions
+            li.navigation__item: a.navigation__link(href="/contact") contact
 
-      block content
+        .dropdown
+          button.btn.btn-default.dropdown-toggle(data-toggle="dropdown") test
+          ul.dropdown-menu
+            li item
+            li item
+
+        block content
+
+        .footer.row
+          block footer
+            p.col-md-8.col-md-offset-2 The songs we sing are copyrights of their respective owners, but the arrangements are ours, and this site is ours. Please don't use anything here without permission.
+            p.col-md-8.col-md-offset-2 TODO WUSTL &amp; SU links
+
 
     // Google Analytics: change UA-XXXXX-X to be your site's ID.
     script.

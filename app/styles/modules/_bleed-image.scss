@@ -4,6 +4,7 @@
   padding: 10rem 2rem;
 
   background-size: cover;
+  background-position: center center;
 
   color: $yellow;
   text-align: center;
@@ -30,6 +31,14 @@
 
 a.bleed-image:hover {
   color: #fff;
+
+  &.bleed-image--withlink:hover {
+    color: $yellow;
+
+    .bleed-image__link {
+      color: #fff;
+    }
+  }
 }
 
 .bleed-image__content {

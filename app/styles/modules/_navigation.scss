@@ -8,7 +8,7 @@
   list-style: none;
 
   // background: #000;
-  border-bottom: 1px solid #333;
+  // border-bottom: 1px solid #333;
 }
 
 .navigation__item {
@@ -16,11 +16,9 @@
   padding: 0;
   margin: 0;
 
-  @include mobile {
-    width: 100%;
-  }
+  width: 100%;
 
-  @include desktop {
+  @include md {
     width: auto;
   }
 }
