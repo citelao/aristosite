@@ -25,75 +25,16 @@ block content
       .block-grid__item-content.person__content
         h3.person__name Rishil Mehta
         h4.person__title Music Director
-    li.block-grid__item.person
-      .block-grid__item-content.person__content
-        h3.person__name Name
-    li.block-grid__item.person
-      .block-grid__item-content.person__content
-        h3.person__name Name
-    li.block-grid__item.person
-      .block-grid__item-content.person__content
-        h3.person__name Name
-    li.block-grid__item.person
-      .block-grid__item-content.person__content
-        h3.person__name Name
-    li.block-grid__item.person
-      .block-grid__item-content.person__content
-        h3.person__name Name
-    li.block-grid__item.person
-      .block-grid__item-content.person__content
-        h3.person__name Name
-    li.block-grid__item.person
-      .block-grid__item-content.person__content
-        h3.person__name Name
-    li.block-grid__item.person
-      .block-grid__item-content.person__content
-        h3.person__name Name
-    li.block-grid__item.person
-      .block-grid__item-content.person__content
-        h3.person__name Name
-    li.block-grid__item.person
-      .block-grid__item-content.person__content
-        h3.person__name Name
-    li.block-grid__item.person
-      .block-grid__item-content.person__content
-        h3.person__name Name
-    li.block-grid__item.person
-      .block-grid__item-content.person__content
-        h3.person__name Name
-    li.block-grid__item.person
-      .block-grid__item-content.person__content
-        h3.person__name Name
+    each name in ['Natasha Bhuyan', 'Ian Boyer-Edwards', 'Vanessa Burks', 'Patricha Chen', 'Elizabeth Coe', 'Nicole Cooper', 'Jonathan Huster', 'Alice Liu', 'Mitch Styczynski', 'Ben Stolovitz', 'Michelle Zhang']
+      li.block-grid__item.person
+        .block-grid__item-content.person__content
+          h3.person__name= name
     li.block-grid__item.block-grid__item--full.person(style="background: #000;")
       a.block-grid__item-content: h3 You?
   .content.row
     h2 Alumni
   ul.row.block-grid.block-grid--small
-    li.block-grid__item.person
-      .block-grid__item-content.person__content
-        h3.person__name Name
-    li.block-grid__item.person
-      .block-grid__item-content.person__content
-        h3.person__name Name
-    li.block-grid__item.person
-      .block-grid__item-content.person__content
-        h3.person__name Name
-    li.block-grid__item.person
-      .block-grid__item-content.person__content
-        h3.person__name Name
-    li.block-grid__item.person
-      .block-grid__item-content.person__content
-        h3.person__name Name
-    li.block-grid__item.person
-      .block-grid__item-content.person__content
-        h3.person__name Name
-    li.block-grid__item.person
-      .block-grid__item-content.person__content
-        h3.person__name Name
-    li.block-grid__item.person
-      .block-grid__item-content.person__content
-        h3.person__name Name
-    li.block-grid__item.person
-      .block-grid__item-content.person__content
-        h3.person__name Name
-
+    each name in ['Katie Gould', 'Ryan Hoffman']
+      li.block-grid__item.person
+        .block-grid__item-content.person__content
+          h3.person__name= name
