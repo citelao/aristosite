@@ -38,6 +38,8 @@
 }
 
 .header__title {
+  font-family: Georgia;
+
   @include md {
     font-size: 10rem;
   }

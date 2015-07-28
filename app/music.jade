@@ -1,9 +1,19 @@
 extends layouts/default
 
 block header
-  .header.header--bleed.row(style="background-image:url('images/music/header.jpg');")
+  .header.header--bleed.row(style="background-image:url('images/music/header.png');")
       h1.header__title music
 
 block content
   .content.row
     h1 Our music
+  .row
+    .col-md-8
+      h2 featured video
+    .col-md-4
+      h2 links to youtube
+  .row
+    .col-md-8.col-md-push-4
+      h2 soundcloud stuff
+    .col-md-4.col-md-pull-8
+      h2 linksto soundcloud
