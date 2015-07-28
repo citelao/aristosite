@@ -3,3 +3,14 @@
   background-size: cover;
   text-align: center;
 }
+
+.person__content {
+  display: block;
+  width: 100%;
+  bottom: 10%;
+
+  padding: 1rem;
+
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+}

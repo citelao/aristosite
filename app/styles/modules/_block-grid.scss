@@ -1,11 +1,10 @@
-// a la Foundation
-// ... but just with 3 items per row.
-
-$items: 3;
+// http://stackoverflow.com/questions/20456694/grid-of-responsive-squares
+$items: 4;
 
 .block-grid {
   list-style: none;
   padding: 0;
+  margin-bottom: 0;
   display: block;
 }
 
@@ -21,6 +20,13 @@ $items: 3;
   padding-bottom: 100%/$items;
 }
 
+  .block-grid--small li,
+  .block-grid__item {
+    width: 100%/$items/2;
+    padding-bottom: 100%/$items/2;
+  }
+
 .block-grid__item-content {
   position: absolute;
+  display: block;
 }
