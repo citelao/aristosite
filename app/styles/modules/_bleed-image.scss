@@ -33,7 +33,10 @@ a.bleed-image:hover {
   color: #fff;
 
   .bleed-image__content {
-    transform: scale(1.1);
+    transition: all 0.1s ease-out;
+    transform: scale(1.2);
+
+    background: rgba(0,0,0, 0.9);
   }
 
   &.bleed-image--withlink:hover {
@@ -52,6 +55,8 @@ a.bleed-image:hover {
   @include make-sm-column(12);
   @include make-md-column(6);
   @include make-md-column-offset(3);
+
+  transition: all 0.2s ease-in;
 
   .bleed-image--larger & {
     @include make-sm-column(12);

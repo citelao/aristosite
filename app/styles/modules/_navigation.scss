@@ -32,10 +32,13 @@
 
   color: $yellow;
 
+  transition: all 0.2s ease-in;
+
   &:hover, &:focus {
     background: $yellow;
     color: $background;
     text-decoration: none;
-    transform: scale(1.1);
+    transform: scale(1.2);
+    transition: all 0s ease-in;
   }
 }
