@@ -1,8 +1,10 @@
 // generated on 2015-07-15 using generator-gulp-webapp 1.0.3
+import os from 'os';
 import gulp from 'gulp';
 import gulpLoadPlugins from 'gulp-load-plugins';
 import browserSync from 'browser-sync';
 import del from 'del';
+import parallel from 'concurrent-transform';
 import {stream as wiredep} from 'wiredep';
 
 const $ = gulpLoadPlugins();
@@ -54,6 +56,9 @@ gulp.task('html', ['views', 'styles'], () => {
   return gulp.src(['app/*.html', '.tmp/*.html'])
     .pipe(assets)
     .pipe($.if('*.js', $.uglify()))
+    .pipe($.if('*.css', $.uncss({
+      html: ['app/*.html', '.tmp/*.html']
+    })))
     .pipe($.if('*.css', $.minifyCss({compatibility: '*'})))
     .pipe(assets.restore())
     .pipe($.useref())
@@ -62,18 +67,35 @@ gulp.task('html', ['views', 'styles'], () => {
 });
 
 gulp.task('images', () => {
-  return gulp.src('app/images/**/*')
-    .pipe($.if($.if.isFile, $.cache($.imagemin({
-      progressive: true,
-      interlaced: true,
-      // don't remove IDs from SVGs, they are often used
-      // as hooks for embedding and styling
-      svgoPlugins: [{cleanupIDs: false}]
-    }))
+  return gulp.src('app/images/**/*.{jpg,png,jpeg}')
+    .pipe($.cached('optimizing'))
+    // .pipe($.debug({title: 'uncached:'}))
+    .pipe(parallel($.imageResize({
+        width: 1170 * 1.5// max-width of bootstrap grid
+      })),
+      os.cpus().length
+    )
+    .pipe(parallel(
+      $.imageoptim.optimize(),
+      os.cpus().length
+    ))
     .on('error', function (err) {
       console.log(err);
       this.end();
-    })))
+    })
+    .pipe(gulp.dest('dist/images'));
+});
+
+gulp.task('vectors', () => {
+  return gulp.src('app/images/**/*.svg')
+    .pipe(parallel(
+      $.imageoptim.optimize(),
+      os.cpus().length
+    ))
+    .on('error', function (err) {
+      console.log(err);
+      this.end();
+    })
     .pipe(gulp.dest('dist/images'));
 });
 
@@ -93,6 +115,12 @@ gulp.task('extras', () => {
   ], {
     dot: true
   }).pipe(gulp.dest('dist'));
+});
+
+gulp.task('audit', () => {
+  return gulp.src('dist/**/*.html')
+    .pipe($.a11y())
+    .pipe($.a11y.reporter());
 });
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
@@ -167,7 +195,7 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
+gulp.task('build', ['lint', 'html', 'images', 'vectors', 'fonts', 'extras', 'audit'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
