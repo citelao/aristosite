@@ -16,4 +16,10 @@
   h1, h2, h3, h4 {
     margin: 0;
   }
+
+  .person--full & {
+    bottom: 0;
+    top: 0;
+    background: 0;
+  }
 }

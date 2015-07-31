@@ -1,5 +1,6 @@
 // http://stackoverflow.com/questions/20456694/grid-of-responsive-squares
 $items: 4;
+$smallitems: 6;
 
 .block-grid {
   list-style: none;
@@ -22,8 +23,8 @@ $items: 4;
 
   .block-grid--small li,
   .block-grid__item {
-    width: 100%/$items/2;
-    padding-bottom: 100%/$items/2;
+    width: 100%/$smallitems;
+    padding-bottom: 100%/$smallitems;
   }
 
 .block-grid__item-content {
