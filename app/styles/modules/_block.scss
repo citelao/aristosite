@@ -22,5 +22,6 @@
   }
 
   .block--light {
-    background: #ddd;
+    background: $lightgrey;
+    color: inherit;
   }
