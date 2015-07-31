@@ -3,7 +3,7 @@ extends layouts/default
 append variables
   - var currentPage = 'about us';
   - var members = ['Natasha Bhuyan', { name: 'Ian Boyer-Edwards', href: 'images/about/members/iboyer-edwards.jpg' }, { name: 'Vanessa Burks', href: 'images/about/members/vburks.jpg' }, 'Patricia Chen', 'Elizabeth Coe', 'Nicole Cooper', 'Jonathan Huster', 'Alice Liu', { name: 'Ben Stolovitz', href: 'images/about/members/bstolovitz.jpg' }, { name: 'Mitch Styczynski', href: 'images/about/members/mstyczynski.jpg' }, { name: 'Michelle Zhang', href: 'images/about/members/mzhang.jpg' }];
-  - var alumni = ['Katie Gould', 'Ryan Hoffman'];
+  - var alumni = ['Katie Gould', 'Ryan Hoffman', { name: 'Ken Zheng', href: 'images/alumni/kzheng.jpg'}];
 
 block header
   .header.header--bleed.row(style="background-image:url('images/about/header.jpg');")
@@ -46,7 +46,12 @@ block content
   .content.row
     h2 Alumni
   ul.row.block-grid.block-grid--small
-    each name in alumni
-      li.block-grid__item.person
-        .block-grid__item-content.person__content
-          h3.person__name= name
+    each person in alumni
+      if typeof person === 'string'
+        li.block-grid__item.person
+          .block-grid__item-content.person__content
+            h3.person__name= person
+      else
+        li.block-grid__item.person(style="background-image: url('#{person.href}');")
+          .block-grid__item-content.person__content
+            h3.person__name= person.name

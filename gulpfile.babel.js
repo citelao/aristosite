@@ -67,18 +67,19 @@ gulp.task('html', ['views', 'styles'], () => {
 });
 
 gulp.task('images', () => {
-  return gulp.src('app/images/**/*.{jpg,png,jpeg}')
-    .pipe($.cached('optimizing'))
-    // .pipe($.debug({title: 'uncached:'}))
+  return gulp.src('app/images/**/*.{jpg,jpeg,png}')
+    .pipe($.changed('dist/images'))
+    // .pipe($.debug({title: 'changed:'}))
     .pipe(parallel($.imageResize({
-        width: 1170 * 1.5// max-width of bootstrap grid
+        width: 1170 * 1.5 // max-width of bootstrap grid * 1.5 for semiretina
       })),
       os.cpus().length
     )
-    .pipe(parallel(
-      $.imageoptim.optimize(),
-      os.cpus().length
-    ))
+    .pipe($.imagemin({
+        progressive: true,
+        interlaced: true,
+        svgoPlugins: [{removeViewBox: false}]
+    }))
     .on('error', function (err) {
       console.log(err);
       this.end();
@@ -88,10 +89,11 @@ gulp.task('images', () => {
 
 gulp.task('vectors', () => {
   return gulp.src('app/images/**/*.svg')
-    .pipe(parallel(
-      $.imageoptim.optimize(),
-      os.cpus().length
-    ))
+    .pipe($.imagemin({
+        progressive: true,
+        interlaced: true,
+        svgoPlugins: [{removeViewBox: false}]
+    }))
     .on('error', function (err) {
       console.log(err);
       this.end();
