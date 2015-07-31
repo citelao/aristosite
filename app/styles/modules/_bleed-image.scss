@@ -58,7 +58,7 @@ a.bleed-image:active {
 
 .bleed-image__content {
   display: inline-block;
-  background: rgba(0,0,0, 0.7);
+  background: rgba(0,0,0, 1);
   padding: 2rem 7rem;
   @include make-sm-column(12);
   @include make-md-column(6);

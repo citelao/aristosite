@@ -34,7 +34,7 @@
 
   transition: all 0.2s ease-in;
 
-  &:hover, &:focus {
+  &:hover, &:focus, .navigation__item--current & {
     background: $yellow;
     color: $background;
     text-decoration: none;
