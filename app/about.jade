@@ -2,6 +2,8 @@ extends layouts/default
 
 append variables
   - var currentPage = 'about us';
+  - var members = ['Natasha Bhuyan', 'Ian Boyer-Edwards', 'Vanessa Burks', 'Patricha Chen', 'Elizabeth Coe', 'Nicole Cooper', 'Jonathan Huster', 'Alice Liu', 'Mitch Styczynski', 'Ben Stolovitz', 'Michelle Zhang'];
+  - var alumni = ['Katie Gould', 'Ryan Hoffman'];
 
 block header
   .header.header--bleed.row(style="background-image:url('images/about/header.jpg');")
@@ -28,7 +30,7 @@ block content
       .block-grid__item-content.person__content
         h3.person__name Rishil Mehta
         h4.person__title Music Director
-    each name in ['Natasha Bhuyan', 'Ian Boyer-Edwards', 'Vanessa Burks', 'Patricha Chen', 'Elizabeth Coe', 'Nicole Cooper', 'Jonathan Huster', 'Alice Liu', 'Mitch Styczynski', 'Ben Stolovitz', 'Michelle Zhang']
+    each name in members
       li.block-grid__item.person
         .block-grid__item-content.person__content
           h3.person__name= name
@@ -37,7 +39,7 @@ block content
   .content.row
     h2 Alumni
   ul.row.block-grid.block-grid--small
-    each name in ['Katie Gould', 'Ryan Hoffman']
+    each name in alumni
       li.block-grid__item.person
         .block-grid__item-content.person__content
           h3.person__name= name

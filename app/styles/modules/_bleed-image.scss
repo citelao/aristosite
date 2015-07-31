@@ -1,7 +1,7 @@
 .bleed-image {
   // position: relative;
   display: block;
-  padding: 10rem 2rem;
+  padding: 40rem 0 0;
 
   background-size: cover;
   background-position: center center;
@@ -29,6 +29,25 @@
   }
 }
 
+.bleed-image__content {
+  display: inline-block;
+  background: rgba(0,0,0, 1);
+  padding: 2rem 7rem;
+
+  @include make-sm-column(12);
+  // @include make-md-column(6);
+  // @include make-md-column-offset(3);
+
+  transition: all 0.2s ease-in;
+
+  .bleed-image--larger & {
+    @include make-sm-column(12);
+    @include make-md-column(10);
+    @include make-md-column-offset(1);
+  }
+}
+
+
 a.bleed-image:hover,
 a.bleed-image:focus {
   color: #fff;
@@ -53,22 +72,5 @@ a.bleed-image:active {
   .bleed-image__content {
     transform: scale(0.95);
     transition: all 0.1s ease-in-out;
-  }
-}
-
-.bleed-image__content {
-  display: inline-block;
-  background: rgba(0,0,0, 1);
-  padding: 2rem 7rem;
-  @include make-sm-column(12);
-  @include make-md-column(6);
-  @include make-md-column-offset(3);
-
-  transition: all 0.2s ease-in;
-
-  .bleed-image--larger & {
-    @include make-sm-column(12);
-    @include make-md-column(10);
-    @include make-md-column-offset(1);
   }
 }
