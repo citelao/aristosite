@@ -1,5 +1,6 @@
 .navigation {
   @include make-row();
+  font-family: Georgia;
 }
 
 .navigation__list {

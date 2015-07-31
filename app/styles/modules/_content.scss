@@ -1,13 +1,18 @@
 .content {
-  background: #fff;
+  background: $white;
 
   padding: 2rem;
 }
 
-.content--flow-top {
-  padding-top: 0;
-}
+  .content--contrast {
+    background: $lightgrey;
+    // color: $yellow;
+  }
 
-.content--flow-bottom {
-  padding-bottom: 0;
-}
+  .content--flow-top {
+    padding-top: 0;
+  }
+
+  .content--flow-bottom {
+    padding-bottom: 0;
+  }
