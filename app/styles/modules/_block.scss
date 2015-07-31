@@ -1,0 +1,26 @@
+.block {
+  display: block;
+
+  text-align: center;
+  background: $black;
+  color: $yellow;
+  // display: flex;
+  // flex: 1;
+
+  padding: 2rem 5rem;
+}
+
+  .block + .block,
+  .block--margin-top {
+    margin-top: 5rem;
+  }
+
+  a.block:hover {
+    color: $white;
+    text-decoration: none;
+    transform: scale(1.1);
+  }
+
+  .block--light {
+    background: #bbb;
+  }
