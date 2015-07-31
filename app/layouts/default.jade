@@ -34,7 +34,8 @@ html.no-js(lang="en")
       block container
         block header
 
-        nav.navigation
+        nav.navigation#nav
+          button.navigation__hamburger(onClick="showMenu()") Menu
           ul.navigation__list
             each item in nav
               if currentPage === item.title

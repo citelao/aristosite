@@ -1,6 +1,34 @@
 .navigation {
   @include make-row();
   font-family: Georgia;
+
+  position: absolute;
+  display: block;
+  top: 0;
+  width: 100%;
+
+  @include md {
+    position: static;
+  }
+}
+
+.navigation__hamburger {
+  float: right;
+
+  color: $yellow;
+  padding: 2rem;
+  background: none;
+  border: 0;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $white;
+  }
+
+  @include md {
+    display: none;
+  }
 }
 
 .navigation__list {
@@ -8,8 +36,19 @@
   margin: 0;
   list-style: none;
 
-  // background: #000;
+  background: #000;
   // border-bottom: 1px solid #333;
+
+  display: none;
+
+  .navigation--toggled & {
+    // position: absolute;
+    display: block;
+  }
+
+  @include md {
+    display: block;
+  }
 }
 
 .navigation__item {
@@ -39,8 +78,11 @@
     background: $yellow;
     color: $background;
     text-decoration: none;
-    transform: scale(1.2);
     transition: all 0s ease-in;
+
+    @include md {
+      transform: scale(1.2);
+    }
   }
 
   &:active {
