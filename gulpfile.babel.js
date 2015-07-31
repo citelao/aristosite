@@ -117,7 +117,7 @@ gulp.task('extras', () => {
   }).pipe(gulp.dest('dist'));
 });
 
-gulp.task('audit', () => {
+gulp.task('audit', ['html'], () => {
   return gulp.src('dist/**/*.html')
     .pipe($.a11y())
     .pipe($.a11y.reporter());
