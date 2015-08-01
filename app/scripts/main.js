@@ -1,11 +1,3 @@
-console.log(
-  '%cThe Aristocats like web developers. You should join us. 😻😻',
-  'font-weight: bold;'
-);
-
-console.log('There\'s no real call for JS on this page so I\'m just gonna log to the console.');
-console.log('meow meow meow meow meow meow');
-
 function showMenu(e) {
   e.preventDefault();
 
@@ -18,7 +10,48 @@ function showMenu(e) {
   }
 }
 
+function videoOnResizer() {
+  var videos = document.querySelectorAll('iframe[src*=\'//www.youtube.com\']');
+
+  for (var i = 0; i < videos.length; i++) {
+    var video = videos.item(i);
+    var h = video.getAttribute('height');
+    var w = video.getAttribute('width');
+
+    video.setAttribute('data-aspect', w / h);
+  }
+
+  return function onResize() {
+    for (var j = 0; j < videos.length; j++) {
+      var v = videos.item(j);
+      var parent = v.parentElement;
+
+      var clientWidth = parent.clientWidth;
+      var style = window.getComputedStyle(parent);
+      var padding = parseFloat(style.paddingLeft) + parseFloat(style.paddingRight);
+      var width = clientWidth - padding;
+
+      var aspect = v.getAttribute('data-aspect');
+      v.setAttribute('width', width);
+      v.setAttribute('height', width / aspect);
+    }
+  };
+}
+
 // onready equiv
 (function() {
   document.getElementById('nav-toggler').addEventListener('click', showMenu);
+
+  var resizer = videoOnResizer();
+  window.onresize = resizer;
+  resizer();
+
+  console.log(
+    '%cThe Aristocats like web developers. You should join us. 😻😻',
+    'font-weight: bold;'
+  );
+
+  console.log('There\'s no real call for intense JS on this page so I\'m just gonna log to the console.');
+  console.log('meow meow meow meow meow meow');
+
 })();
