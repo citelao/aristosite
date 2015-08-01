@@ -1,15 +1,17 @@
 .bleed-image {
   // position: relative;
   display: block;
-  padding: 40rem 0 0;
+  padding: 20rem 0 0;
 
   background-size: cover;
   background-position: center center;
+  border-bottom: 5rem solid $black;
 
   color: $yellow;
   text-align: center;
 
-  @include make-row();
+  // @include make-row();
+  @include make-md-column(12);
 
   // &:after {
   //   content: ' ';
@@ -31,19 +33,15 @@
 
 .bleed-image__content {
   display: inline-block;
-  background: rgba(0,0,0, 1);
-  padding: 2rem 7rem;
-
-  @include make-sm-column(12);
-  // @include make-md-column(6);
-  // @include make-md-column-offset(3);
-
+  background: linear-gradient(0deg, $black, $black);
+  transform-origin: center bottom;
+  padding: 5rem;
+  width: 100%;
+  max-width: 30rem;
   transition: all 0.2s ease-in;
 
   .bleed-image--larger & {
-    @include make-sm-column(12);
-    @include make-md-column(10);
-    @include make-md-column-offset(1);
+    max-width: 60rem;
   }
 }
 
@@ -54,9 +52,8 @@ a.bleed-image:focus {
 
   .bleed-image__content {
     transition: all 0.1s ease-out;
-    transform: scale(1.2);
-
-    background: rgba(0,0,0, 0.9);
+    // transform: scale(1.2);
+    // background: linear-gradient(0deg, $black, rgba(0,0,0,0.8));
   }
 
   &.bleed-image--withlink:hover {

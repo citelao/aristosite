@@ -57,7 +57,8 @@ gulp.task('html', ['views', 'styles'], () => {
     .pipe(assets)
     .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', $.uncss({
-      html: ['app/*.html', '.tmp/*.html']
+      html: ['app/*.html', '.tmp/*.html'],
+      ignore: [/toggled/]
     })))
     .pipe($.if('*.css', $.minifyCss({compatibility: '*'})))
     .pipe(assets.restore())

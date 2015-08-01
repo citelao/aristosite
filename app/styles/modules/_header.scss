@@ -2,10 +2,15 @@
   background: url('../images/header/bg.png');
   background-size: 300px 300px;
   background-attachment: fixed;
+  background-position: center top;
 
   padding: 15rem 0;
   color: $yellow;
   text-align: center;
+
+  @include md {
+    background-position: top left;
+  }
 
   &.header--bleed {
     position: relative;

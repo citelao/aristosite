@@ -6,6 +6,7 @@
   display: block;
   top: 0;
   width: 100%;
+  z-index: 9999;
 
   @include md {
     position: static;
@@ -41,15 +42,15 @@
 
   display: none;
 
-  .navigation--toggled & {
-    // position: absolute;
-    display: block;
-  }
-
   @include md {
     display: block;
   }
 }
+
+  /* uncss:ignore */
+  .navigation--toggled .navigation__list {
+    display: block;
+  }
 
 .navigation__item {
   display: inline-block;
