@@ -4,10 +4,12 @@
   text-align: center;
   background: $black;
   color: $yellow;
-  // display: flex;
-  // flex: 1;
 
   padding: 2rem;
+
+  a {
+    color: $white;
+  }
 }
 
   .block + .block,
@@ -24,4 +26,13 @@
   .block--light {
     background: $lightgrey;
     color: inherit;
+
+    a {
+      color: $yellow;
+    }
+  }
+
+  .block--rhythm {
+    padding-top: 0;
+    padding-bottom: 0;
   }
