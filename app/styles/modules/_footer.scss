@@ -4,3 +4,11 @@
 
   margin: 5rem 0;
 }
+
+.footer__link {
+  opacity: 0.5;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
