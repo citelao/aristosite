@@ -11,21 +11,25 @@ block content
   .content.row
     h1 Our music
     h2 Current lineup
-    ul.block-grid
+    ul
       - var lineup = [{ title: 'Disney Intro', artist: 'Disney?', arranger: '???'}, { title: 'Life Is a Highway', artist: 'Tom Cochrane & Rascal Flatts', arranger: 'Ben Stolovitz'}, { title: 'Down in New Orleans', artist: 'Dr. John & Randy Newman', arranger: 'Ben Stolovitz'}, { title: 'Everybody Wants to Be a Cat (alumni song)', artist: 'Richard M. Sherman, Robert B. Sherman, Al Rinker, Floyd Huddleston', arranger: '???'}];
       each song in lineup
-        li.block-grid__item
+        li
           h3= song.title
           p <strong>Original:</strong> #{song.artist}
           p <strong>Arrangement:</strong> #{song.arranger}
-  .row
+  .content.row
     .col-md-8
-      h2 featured video
       iframe(width="560" height="315" src="https://www.youtube.com/embed/F4ICMxmSLBc" frameborder="0" allowfullscreen)
-    .col-md-4
-      h2 links to youtube
-  .row
+    .block.block--light.col-md-4
+      h2 Phineas and Ferb Medley
+      p Our performance of Ryan Hoffman's <strong>Phineas and Ferb Medley</strong> from Bella Notte 2015.
+      p <strong>Soloists</strong>: Mitch Styczynski, Alice Liu, Vanessa Burks, Michelle Zhang, and Ryan Hoffman.
+      a.block(href="https://youtube.com/user/thearistocatswashu/") Watch more on YouTube &rarr;
+  .content.row
     .col-md-8.col-md-push-4
-      h2 soundcloud stuff
-    .col-md-4.col-md-pull-8
-      h2 linksto soundcloud
+      iframe(width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/62909869&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false")
+    .block.block--light.col-md-4.col-md-pull-8
+      h2 Soundcloud
+      p You can also find us on Soundcloud.
+      a.block(href="https://soundcloud.com/wash-u-aristocats") Soundcloud &rarr;
