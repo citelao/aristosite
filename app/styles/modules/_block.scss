@@ -33,6 +33,8 @@
   }
 
   .block--rhythm {
-    padding-top: 0;
-    padding-bottom: 0;
+    @include md {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
   }
