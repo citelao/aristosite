@@ -11,10 +11,10 @@ block content
   .content.row
     h1 Our music
     h2 Current lineup
-    ul
-      - var lineup = [{ title: 'Disney Intro', artist: 'Disney?', arranger: '???'}, { title: 'Life Is a Highway', artist: 'Tom Cochrane & Rascal Flatts', arranger: 'Ben Stolovitz'}, { title: 'Down in New Orleans', artist: 'Dr. John & Randy Newman', arranger: 'Ben Stolovitz'}, { title: 'Everybody Wants to Be a Cat (alumni song)', artist: 'Richard M. Sherman, Robert B. Sherman, Al Rinker, Floyd Huddleston', arranger: '???'}];
+    ul.float-grid
+      - var lineup = [{ title: 'Disney Intro', artist: 'Disney?', arranger: '???'}, { title: 'Life Is a Highway', artist: 'Tom Cochrane & Rascal Flatts', arranger: 'Ben Stolovitz'}, { title: 'Down in New Orleans', artist: 'Dr. John & Randy Newman', arranger: 'Ben Stolovitz'}, { title: 'Everybody Wants to Be a Cat (alumni song)', artist: 'Richard M. Sherman, Robert B. Sherman, Al Rinker, Floyd Huddleston', arranger: '???'}, { title: 'Why Should I Worry?', artist: '???', arranger: '???'}, { title: 'Love in 3/4 Medley', artist: '???', arranger: '???'}, { title: 'Son of Man', artist: '???', arranger: '???'}, { title: 'Go the Distance', artist: '???', arranger: '???'}, { title: 'Prince Ali', artist: '???', arranger: '???'}, { title: 'Love is an Open Door', artist: '???', arranger: '???'}, { title: 'You\'ll Be in My Heart', artist: '???', arranger: '???'}];
       each song in lineup
-        li
+        li.float-grid__item
           h3= song.title
           p <strong>Original:</strong> #{song.artist}
           p <strong>Arrangement:</strong> #{song.arranger}
