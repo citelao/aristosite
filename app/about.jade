@@ -2,7 +2,7 @@ extends layouts/default
 
 append variables
   - var currentPage = 'about us';
-  - var members = ['Natasha Bhuyan', { name: 'Ian Boyer-Edwards', href: 'images/about/members/iboyer-edwards.jpg' }, { name: 'Vanessa Burks', href: 'images/about/members/vburks.jpg' }, { name: 'Patricia Chen', href: 'images/members/pchen.jpg' }, { name: 'Elizabeth Coe', href: 'images/members/ecoe.jpg' }, { name: 'Nicole Cooper', href: 'images/members/ncooper.png'}, { name: 'Jonathan Huster', href: 'images/members/jhuster.jpg'}, { name: 'Alice Liu', href: 'images/members/aliu.jpg' }, { name: 'Ben Stolovitz', href: 'images/about/members/bstolovitz.jpg' }, { name: 'Mitch Styczynski', href: 'images/about/members/mstyczynski.jpg' }, { name: 'Michelle Zhang', href: 'images/about/members/mzhang.jpg' }];
+  - var members = [{ name: 'Natasha Bhuyan', href: 'images/members/nbhuyan.jpg' }, { name: 'Ian Boyer-Edwards', href: 'images/about/members/iboyer-edwards.jpg' }, { name: 'Vanessa Burks', href: 'images/about/members/vburks.jpg' }, { name: 'Patricia Chen', href: 'images/members/pchen.jpg' }, { name: 'Elizabeth Coe', href: 'images/members/ecoe.jpg' }, { name: 'Nicole Cooper', href: 'images/members/ncooper.png'}, { name: 'Jonathan Huster', href: 'images/members/jhuster.jpg'}, { name: 'Alice Liu', href: 'images/members/aliu.jpg' }, { name: 'Ben Stolovitz', href: 'images/about/members/bstolovitz.jpg' }, { name: 'Mitch Styczynski', href: 'images/about/members/mstyczynski.jpg' }, { name: 'Michelle Zhang', href: 'images/about/members/mzhang.jpg' }];
   - var alumni = [{ name: 'Katie Gould', href: 'images/alumni/kgould.jpg'}, { name: 'Ryan Hoffman', href: 'images/alumni/rhoffman.jpg'}, { name: 'Kunal Mathur', href: 'images/alumni/kmathur.jpg'}, { name: 'Ken Zheng', href: 'images/alumni/kzheng.jpg'}, { name: 'Mathew Ashner', href: 'images/alumni/mashner.jpg'}, { name: 'Stephanie Drahozal', href: 'images/alumni/sdrahozal.jpg'}, { name: 'Meredith Lanzen', href: 'images/alumni/mlanzen.jpg'}];
 
 block header
@@ -23,7 +23,7 @@ block content
       a(href="/auditions.html").block Join us &rarr;
   .content.row
     h2 Current Members
-  ul.row.block-grid
+  ul.row.block-grid.block-grid--light
     li.block-grid__item.person(style="background-image: url('images/about/members/mduan.jpg');")
       .block-grid__item-content.person__content
         h3.person__name Michael Duan
@@ -46,7 +46,7 @@ block content
         h3 You?
   .content.row
     h2 Alumni
-  ul.row.block-grid.block-grid--small
+  ul.row.block-grid.block-grid--small.block-grid--light
     each person in alumni
       if typeof person === 'string'
         li.block-grid__item.person

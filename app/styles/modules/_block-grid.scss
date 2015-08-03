@@ -1,6 +1,6 @@
 // http://stackoverflow.com/questions/20456694/grid-of-responsive-squares
 $items: 3;
-$smallItems: 6;
+$smallItems: 5;
 
 $mobileItems: 2;
 
@@ -10,6 +10,10 @@ $mobileItems: 2;
   margin-bottom: 0;
   display: block;
 }
+
+  .block-grid--light {
+    background: $white;
+  }
 
 .block-grid li,
 .block-grid__item {
