@@ -43,9 +43,10 @@ block content
         li.block-grid__item.person(style="background-image: url('#{person.href}');")
           .block-grid__item-content.person__content
             h3.person__name= person.name
-    li.block-grid__item.block-grid__item--full.person(style="background-image: url('images/about/members/you.png');")
-      a.block-grid__item-content.person__content(href="/auditions.html")
-        h3 You?
+    li.block-grid__item.block-grid__item--full.person.person--full(style="background-image: url('images/about/members/you.png');")
+      a.block-grid__item-content(href="/auditions.html")
+        .person__content
+          h3 You?
   .content.row
     h2 Alumni
   ul.row.block-grid.block-grid--small.block-grid--light
