@@ -6,13 +6,17 @@ $items: 2;
   list-style: none;
 }
 
-  .float-grid__item {
-    // display: flex;
-    float: left;
-    width: 100%/$items;
-    max-width: 20em;
-    // flex: 1;
+.float-grid__item {
+  // display: flex;
+  float: left;
+  width: 100%/$items;
+  // flex: 1;
 
-    text-align: center;
-    margin-bottom: 2rem;
-  }
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.float-grid__content {
+  max-width: 20em;
+  margin: 0 auto;
+}

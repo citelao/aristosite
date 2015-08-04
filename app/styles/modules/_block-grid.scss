@@ -3,6 +3,7 @@ $items: 3;
 $smallItems: 5;
 
 $mobileItems: 2;
+$mobileSmallItems: 3;
 
 .block-grid {
   list-style: none;
@@ -35,8 +36,13 @@ $mobileItems: 2;
 
   .block-grid--small li,
   .block-grid__item {
-    width: 100%/$smallItems;
-    padding-bottom: 100%/$smallItems;
+    width: 100%/$mobileSmallItems;
+    padding-bottom: 100%/$mobileSmallItems;
+
+    @include md {
+      width: 100%/$smallItems;
+      padding-bottom: 100%/$smallItems;
+    }
   }
 
 .block-grid__item-content {
