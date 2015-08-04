@@ -1,15 +1,31 @@
 block variables
   - var currentPage = 'home';
   - var nav = [{ title: 'home', href: '/' }, { title: 'about us', href: '/about.html' }, { title: 'music', href: '/music.html' }, { title: 'auditions', href: '/auditions.html' }, { title: 'contact', href: '/contact.html' }];
+  - var title = 'The Washington University Aristocats';
+  - var description = 'The Washington University Aristocats wreak havoc and sing Disney music at Washington University in St. Louis. Listen to our music & join us!';
 
 doctype html
 html.no-js(lang="en")
   head
     meta(charset='utf-8')
-    block title
-      title The Washington University Aristocats
-    meta(name='description' content='')
     meta(name='viewport' content='width=device-width, initial-scale=1')
+
+    title=title
+    meta(name='description' content=description)
+
+    meta(name='og:title' content=title)
+    meta(name='og:description' content=description)
+    meta(name='og:site_name' content='The Washington University Aristocats')
+    meta(name='og:see_also' content='http://aristocats.wustl.edu/')
+
+    //- <meta property="og:image" content="{{imageUrl}}">
+
+    meta(name='twitter:card' content='summary')
+    meta(name='twitter:site' content='@WashUAristocats')
+    meta(name='twitter:title' content=title)
+    meta(name='twitter:description' content=description)
+
+    //- <meta name="twitter:image" content="{{imageUrl}}">
 
     link(rel='apple-touch-icon', sizes='57x57', href='/apple-touch-icon-57x57.png')
     link(rel='apple-touch-icon', sizes='60x60', href='/apple-touch-icon-60x60.png')
