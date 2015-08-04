@@ -4,6 +4,7 @@ append variables
   - var currentPage = 'auditions';
   - var title = 'Auditions — the Washington University Aristocats';
   - var description = 'Join the Washington University Aristocats in their loud Disney singing.';
+  - var bookingLink = 'https://aristocats.youcanbook.me/';
 
 block header
   .header.header--bleed.row(style="background-image:url('images/auditions/header.png');")
@@ -18,7 +19,7 @@ block content
       p We are a fun-loving and welcoming group dedicated to spreading Disney magic around the Wash U campus! We are more than just an a cappella group — <em class="highlight">we are a family</em>. In joining an a cappella group, the friends you make and the music you create will be essential components of an unforgettable college experience. Here in the Aristocats, we work together, embrace each other's quirks, and make endless amounts of memories and inside jokes... all while singing some awesome music! If you enjoy singing and fun (who doesn't?) then the Aristocats is right for you.
     .col-md-4.block.block--light
       p No need to read if you don't want; sign up here!
-      a.block(href="#") Book an audition &rarr;
+      a.block(href=bookingLink) Book an audition &rarr;
   .content.row.content--contrast
     .col-md-6.col-md-offset-6
       h2 Do I need previous singing experience?
@@ -53,7 +54,7 @@ block content
       h2 Sounds good! How do I sign up?
   .content.row.content--flow-top
     .col-md-8
-      p You can <a href="#?TODO">sign up online</a>.
+      p You can <a href=bookingLink>sign up online</a>.
       p Or, catch us at the a cappella info session at <em class="highlight">College Hall at 6PM on August 30th</em> (2015), or while we dormstorm the South 40 from September 1stst through September 3rd! Please email our lovely auditions coordinator Vanessa Burks at <a href="mailto:vanessanburks@wustl.edu">vanessanburks@wustl.edu</a> if you have any questions about auditions!
     .col-md-4.block.block--light
       p Book an audition with us now:
