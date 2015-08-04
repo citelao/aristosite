@@ -68,7 +68,7 @@ html.no-js(lang="en")
         block header
 
         nav.navigation#nav
-          button.navigation__hamburger#nav-toggler(tabindex="1") Menu
+          button.navigation__hamburger#nav-toggler Menu
           ul.navigation__list
             each item in nav
               if currentPage === item.title
@@ -76,20 +76,19 @@ html.no-js(lang="en")
               else
                 li.navigation__item: a.navigation__link(href=item.href)= item.title
 
-        //- .container-fluid
-        //-   button.dropdown-toggle(data-toggle="collapse" aria-expanded="false" aria-controls="collapseExample" data-target="#menu") menu
-        //-   ul.collapse#menu
-        //-     li item
-        //-     li item
-
         block content
 
         .footer.row
           block footer
             p.col-md-8.col-md-offset-2 The songs we sing are copyrights of their respective owners, but the arrangements are ours, and this site is ours. Please don't use anything here without permission.
             .col-md-8.col-md-offset-2
-              a.footer__link(href="http://su.wustl.edu" title="The homepage of Wash U's Student Union, our sponsors."): img(src="images/footer/sulogo.svg" height="50" width="50" alt="The Wash U Student Union logo" title="The Wash U Student Union logo")
-              a.footer__link(href="http://wustl.edu" title="The Washington University in St. Louis homepage"): img(src="images/footer/wustllogo.svg" height="60" width="60" alt="The Wash U logo" title="The Wash U logo")
+              a.footer__link(href="http://su.wustl.edu" title="The homepage of Wash U's Student Union, our sponsors.")
+                img(src="images/footer/sulogo.svg" height="50" width="50" alt="")
+                | Student Union
+              | |
+              a.footer__link(href="http://wustl.edu" title="The Washington University in St. Louis homepage")
+                img(src="images/footer/wustllogo.svg" height="60" width="60" alt="")
+                | Washington University in St. Louis
 
     script.
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

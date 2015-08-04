@@ -6,9 +6,18 @@
 }
 
 .footer__link {
+  color: $white;
   opacity: 0.5;
+
+  margin: 0 1rem;
+
+  img {
+    margin-right: 1rem;
+  }
 
   &:hover {
     opacity: 0.9;
+    color: $white;
+    text-decoration: none;
   }
 }

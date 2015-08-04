@@ -14,6 +14,10 @@ $items: 2;
 
   text-align: center;
   margin-bottom: 2rem;
+
+  &:nth-child(#{$items}n) {
+    clear: right;
+  }
 }
 
 .float-grid__content {
