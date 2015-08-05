@@ -13,28 +13,6 @@ block content
   .content.row
     h1 Our music
     p The Aristocats host two major concerts each year, one in early Winter (<strong>Be Our Guest</strong>) and one in mid-spring (<strong>Bella Notte</strong>). We also sing at small community engagements throughout the year, and deliver <strong>Aristograms</strong> on the week of Valentine's Day with a special repertoire.
-    h2 Current songs
-    ul.float-grid
-      - var lineup = [{ title: 'Disney Intro', artist: 'Disney?', arranger: '???'}, { title: 'Life Is a Highway', artist: 'Tom Cochrane & Rascal Flatts', arranger: 'Ben Stolovitz', soloist: 'TBD' }, { title: 'Down in New Orleans', artist: 'Dr. John & Randy Newman', arranger: 'Ben Stolovitz', soloist: 'TBD' }, { title: 'Everybody Wants to Be a Cat (alumni song)', artist: 'Richard M. Sherman, Robert B. Sherman, Al Rinker, Floyd Huddleston', arranger: 'Stephanie Drahozal'}, { title: 'Why Should I Worry?', artist: 'Billy Joel', arranger: 'Rishil Mehta', soloist: 'TBD' }, { title: 'Love in 3/4 Medley', artist: '???', arranger: 'Ryan Hoffman', soloist: 'TBD' }, { title: 'Son of Man', artist: '???', arranger: 'Nicole Cooper', soloist: 'TBD' }, { title: 'Go the Distance', artist: '???', arranger: 'Michelle Zhang & Patricia Chen', soloist: 'TBD' }, { title: 'Prince Ali', artist: 'Rishil Mehta', arranger: 'Alan Menken and Howard Ashman', soloist: 'TBD' }, { title: 'Love is an Open Door', artist: '???', arranger: 'Patricia Chen', soloist: 'Michael Duan & Michelle Zhang' }, { title: 'You\'ll Be in My Heart', artist: '???', arranger: 'Katie Gould', soloist: 'Michael Duan' }];
-      each song in lineup
-        li.float-grid__item
-          .float-grid__content
-            h3= song.title
-            table.definition-table
-              tr
-                th Original
-                td=song.artist
-              tr
-                th Arrangement
-                td=song.arranger
-              if song.soloist
-                tr
-                  th Soloist
-                  td=song.soloist
-            //- p <strong>Original:</strong> #{song.artist}
-            //- p <strong>Arrangement:</strong> #{song.arranger}
-            //- if song.soloist
-            //-   p <strong>Soloist:</strong> #{song.soloist}
   .content.row
     .col-md-8
       iframe(width="560" height="315" src="https://www.youtube.com/embed/F4ICMxmSLBc" frameborder="0" allowfullscreen)
@@ -50,3 +28,22 @@ block content
       h2 Soundcloud
       p You can also find us on Soundcloud.
       a.block(href="https://soundcloud.com/wash-u-aristocats") Soundcloud &rarr;
+  .content.row
+    h2 Current songs
+    ul.float-grid
+      - var lineup = [{ title: 'Disney Intro', artist: 'Leigh Harline & Ned Washington', arranger: 'TBD'}, { title: 'Life Is a Highway', artist: 'Tom Cochrane & Rascal Flatts', arranger: 'Ben Stolovitz', soloist: 'TBD' }, { title: 'Down in New Orleans', artist: 'Dr. John & Randy Newman', arranger: 'Ben Stolovitz', soloist: 'TBD' }, { title: 'Everybody Wants to Be a Cat (alumni song)', artist: 'Richard M. Sherman, Robert B. Sherman, Al Rinker, Floyd Huddleston', arranger: 'Stephanie Drahozal'}, { title: 'Why Should I Worry?', artist: 'Billy Joel', arranger: 'Rishil Mehta', soloist: 'TBD' }, { title: 'Love in 3/4 Medley', artist: '???', arranger: 'Ryan Hoffman', soloist: 'TBD' }, { title: 'Son of Man', artist: 'Phil Collins', arranger: 'Nicole Cooper', soloist: 'TBD' }, { title: 'Go the Distance', artist: '???', arranger: 'Michelle Zhang & Patricia Chen', soloist: 'TBD' }, { title: 'Prince Ali', artist: 'Rishil Mehta', arranger: 'Alan Menken and Howard Ashman', soloist: 'TBD' }, { title: 'Love Is an Open Door', artist: 'Kristen Anderson-Lopez & Robert Lopez', arranger: 'Patricia Chen', soloist: 'Michael Duan & Michelle Zhang' }, { title: 'You\'ll Be in My Heart', artist: 'Phil Collins', arranger: 'Katie Gould', soloist: 'Michael Duan' }];
+      each song in lineup
+        li.float-grid__item
+          .float-grid__content
+            h3= song.title
+            table.definition-table
+              tr
+                th Original
+                td=song.artist
+              tr
+                th Arrangement
+                td=song.arranger
+              if song.soloist
+                tr
+                  th Soloist
+                  td=song.soloist
